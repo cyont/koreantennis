@@ -42,9 +42,11 @@ mysqli_select_db($connTennis, $database_connTennis);
 // echo "Conneted Successfully";
 
 $query_rsAnnouncement = "SELECT * FROM announcement WHERE lid = 21 and koreantennis = 1 and active=1 ORDER BY `timestamp` DESC";
-$rsAnnouncement = mysqli_query($query_rsAnnouncement, $connTennis) or die(mysql_error());
-$row_rsAnnouncement = mysql_fetch_assoc($rsAnnouncement);
-$totalRows_rsAnnouncement = mysql_num_rows($rsAnnouncement);
+// $rsAnnouncement = mysqli_query($query_rsAnnouncement, $connTennis) or die(mysql_error());
+// $query=mysqli_query($myConnection, $sqlCommand) or die(mysql_error()) 
+$rsAnnouncement = mysqli_query($connTennis, $query_rsAnnouncement) or die(mysqli_error());
+$row_rsAnnouncement = mysqli_fetch_assoc($rsAnnouncement);
+$totalRows_rsAnnouncement = mysqli_num_rows($rsAnnouncement);
  
 ?>
 <!DOCTYPE html
@@ -87,7 +89,7 @@ $totalRows_rsAnnouncement = mysql_num_rows($rsAnnouncement);
        	 <?php do { ?>
        	   <li><span class="contenttitle_green"><?php echo $row_rsAnnouncement['title']; ?></span> (posted on <span class="text_red"><?php echo date('n/j/Y, h:i A', strtotime($row_rsAnnouncement['timestamp'])); ?></span>)<br />
 		   <?php echo $row_rsAnnouncement['announcement']; ?><br /><br /></li>
-       	   <?php } while ($row_rsAnnouncement = mysql_fetch_assoc($rsAnnouncement)); ?></ul>
+       	   <?php } while ($row_rsAnnouncement = mysqli_fetch_assoc($rsAnnouncement)); ?></ul>
          <?php } else { ?>
          Currently there is no active announcement.
          <?php } ?>
@@ -157,5 +159,5 @@ $totalRows_rsAnnouncement = mysql_num_rows($rsAnnouncement);
 </body>
 </html>
 <?php
-mysql_free_result($rsAnnouncement);
+mysqli_free_result($rsAnnouncement);
 ?>
