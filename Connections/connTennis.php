@@ -2,6 +2,7 @@
 # FileName="Connection_php_mysql.htm"
 # Type="MYSQL"
 # HTTP="true"
+// Change this.
 date_default_timezone_set('America/Los_Angeles');
 
 $hostname_connTennis = "localhost";
