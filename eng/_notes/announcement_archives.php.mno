@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsAnnouncement" value="name:id;datatype:int,name:lid;datatype:int,name:title;datatype:string,name:announcement;datatype:string,name:active;datatype:int,name:koreantennis;datatype:int,name:timestamp;datatype:timestamp" />
+</info>

@@ -1,0 +1,332 @@
+body {
+	font: 14px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #000000;
+	margin: 0px;
+	padding: 0px;
+}
+td {
+	font: 14px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #999999;
+	text-decoration: none;
+}
+h1 {
+	font: 24px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+h2 {
+	font: 17px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+h3 {
+	font: 14px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+}
+h4 {
+	font: 12px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+	display: inline;
+}
+.footer {
+	background: #272727 url(../images/footerbg.jpg) repeat-x center top;
+	padding: 20px 10px;
+	color: #999999;
+	font-size: 11px;
+}
+.menuline {
+	border-bottom: 1px solid #2C2C2C;
+	color: #2C2C2C;
+}
+
+
+h1 a {
+	font: 24px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+	display: block;
+	padding-top: 4px;
+	padding-left: 20px;
+}
+h1 a:hover {
+
+
+	font: 24px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+h2 a {
+
+	font: 17px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+h2 a:hover {
+
+
+	font: 17px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+h3 a {
+
+
+	font: 14px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+h3 a:hover {
+
+
+
+	font: 14px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+h4 a {
+	font: 13px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #CCCCCC;
+	text-decoration: none;
+	display: inline;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+h4 a:hover {
+	font: 13px "Trebuchet MS", "Century Gothic", Century, serif;
+	color: #999999;
+	text-decoration: none;
+	display: inline;
+}
+.footer a {
+	font: normal 12px Geneva, Arial, Helvetica, sans-serif;
+	color: #88D9F3;
+	text-decoration: none;
+	display: inline;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.footer a:hover {
+	font: normal 12px Geneva, Arial, Helvetica, sans-serif;
+	color: #15A4D2;
+	text-decoration: none;
+	display: inline;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.color1 {
+	color: #88D9F3;
+	text-decoration: none;
+}
+
+.headerbg {
+	background: #000000 url(../images/headerbg.jpg) repeat-x center top;
+}
+.btn {
+	font: 14px "trebuchet MS", "Century Gothic", Century;
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #333333 url(../images/btn.jpg) no-repeat center center;
+	height: 28px;
+	width: 64px;
+	border-style: none;
+}
+
+.frmtxt {
+	font: 14px "trebuchet MS", "Century Gothic", Century, serif;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF;
+	padding-right: 2px;
+	padding-left: 2px;
+	border-style: none;
+}
+.frmtxt2 {
+	font: 14px "trebuchet MS", "Century Gothic", Century, serif;
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF;
+	border-style: none;
+	vertical-align: middle;
+	height: 28px;
+	padding: 5px 2px 0px;
+}
+.brd1 {
+	text-decoration: none;
+	padding: 20px 10px;
+	border: 1px dashed #272727;
+}
+.color1 a {
+
+	color: #88D9F3;
+	text-decoration: none;
+}
+.color1 a:hover {
+
+
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.color2 {
+	color: #656565;
+	text-decoration: none;
+}
+.color3 {
+
+	color: #ff6600;
+	text-decoration: none;
+}
+.navlinks {
+	font-size: 14px;
+	color: #666666;
+	text-decoration: none;
+}
+.navlinks a {
+	font-size: 14px;
+	color: #999999;
+	text-decoration: none;
+}
+.navlinks a:hover {
+
+	font-size: 14px;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+.currentStyle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.imgst {
+	padding: 2px;
+	border: 2px solid #FFFFFF;
+}
+.controls {
+	font-size: 12px;
+	color: #272727;
+	text-decoration: none;
+}
+.controls a {
+	font-size: 14px;
+	color: #88D9F3;
+	text-decoration: none;
+	display: inline;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.controls a:hover {
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: inline;
+}
+.brdboth {
+	border: 1px solid #2C2C2C;
+	padding: 10px;
+}
+.pad2 {
+	padding: 10px;
+}
+
+.imgst2 {
+	padding: 2px;
+	border: 2px solid #333333;
+}
+.shbg {
+	background: #FFFFFF url(../images/bbg.jpg) repeat-x center top;
+}
+.spaceword {
+	letter-spacing: 8px;
+	word-spacing: 14px;
+	display: inline;
+}
+.brd2 {
+	text-decoration: none;
+	padding: 10px;
+	border: 1px dashed #913900;
+}
+.brd3 {
+	text-decoration: none;
+	padding: 20px 10px;
+	border: 1px dashed #3B3B3B;
+}
+.wh {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menu2 {
+	font-size: 14px;
+	color: #666666;
+	text-decoration: none;
+}
+.menu2 a {
+	font-size: 14px;
+	color: #CCCCCC;
+	text-decoration: none;
+	display: inline;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.menu2 a:hover {
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: inline;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.linksim {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.linksim:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.color2 a {
+
+	color: #656565;
+	text-decoration: underline;
+}
+.color2 a:hover {
+
+
+	color: #656565;
+	text-decoration: none;
+}
+.color3 a {
+
+
+	color: #ff6600;
+	text-decoration: none;
+}
+.color3 a:hover {
+
+
+
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.color3:hover {
+
+
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.colorfc {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+.colorfc:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#give_indent {
+	margin-left: 60px;
+}

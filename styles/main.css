@@ -1,0 +1,492 @@
+/*----------------------------------------------------------------------------
+	main.css
+
+	this css-file contains all definitions, that are independend from the
+	colorschemes.
+
+	(c) Schlund + Partner AG
+
+	This CSS-File uses the original "Tanteks Box Modell Hack"
+	http://www.tantek.com/CSS/Examples/boxmodelhack.html
+
+	NOTE:
+	Older W3C CSS validators return errors when the voice-family property
+	is used in a 'screen' style sheet. This is an error in the W3C CSS
+	validator itself. The validator should report a warning, not an error,
+	when properties which are unsupported by a particular medium are used,
+	and this has been reported to the W3C:
+
+ ----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------
+ styles for specific classes and ids
+----------------------------------------------------------------------------*/
+
+body#main_body {
+    margin: 0;
+    padding: 12px 0px 5px 0px;
+    text-align: center;
+}
+
+/*-- global container ------------------------------------------------------*/
+
+#container {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+    width: 915px;
+}
+
+#header {
+    position: relative;
+    float: left;
+    clear: both;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+    width: 915px;
+    min-height: 162px;
+    top: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#main_container {
+    position: relative;
+    float: left;
+    clear: both;
+    padding: 3px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background-repeat: repeat-y;
+}
+
+#layout_table {
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#sub_nav_column {
+    vertical-align: top;
+}
+
+#content_column {
+    vertical-align: top;
+    background-repeat: repeat-y;
+}
+
+#left_column_container {
+    position: relative;
+    top: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 206px;
+    background-repeat: repeat-y;
+}
+
+#sub_container1 {
+    margin: 25px 0px 0px 10px;
+    padding: 0;
+}
+
+#sub_container2 {
+    margin: 0;
+    padding: 5px 30px 5px 30px;
+    width: 649px;
+    background-repeat: repeat-y;
+}
+
+#content_container {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0;
+    width: 649px;
+}
+
+#content_b {
+    position: relative;
+    float: left;
+    clear: both;
+    width: 915px;
+    height: 51px;
+    background-repeat: no-repeat;
+}
+
+/*--- key visual -----------------------------------------------------------*/
+
+#key_visual {
+    /*clear: both;*/
+
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 909px;
+    height: 121px;
+    /*margin-left: 261px;*/
+
+    padding-right: 5px;
+    float: right;
+    z-index: 5;
+}
+
+/*--- slogan (as text or background image) ---------------------------------*/
+
+#slogan {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 13px 15px 3px 15px;
+    width: 655px;
+    min-height: 25px;
+    text-align: right;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    margin-left: 230px;
+    z-index: 10;
+}
+
+html>body #slogan {
+    width: 655px;
+}
+
+/*--- logo -----------------------------------------------------------------*/
+
+#logo {
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 85px;
+    position: relative;
+    top: 19px;
+    left: 21px;
+    float: left;
+    z-index: 7;
+}
+
+/*--- main navigation ------------------------------------------------------*/
+
+#main_nav_container {
+    z-index: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    line-height: 0;
+    padding: 0px 0px 0px 0px;
+    margin: 0 0 0px 0;
+    overflow: hidden;
+    width: 206px;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    background-repeat: no-repeat;
+}
+
+html>body #main_nav_container {
+    /*width: 555px;*/
+
+}
+
+#main_nav_list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#main_nav_list li {
+    margin: 0px 0 0 0;
+    padding: 0;
+}
+
+/*--- main navigation items ------------------------------------------------*/
+
+#main_nav_list a {
+    overflow: hidden;
+    margin: 0;
+    /*padding: 3px 19px 2px 10px;*/
+
+    padding-left: 31px;
+    padding-right: 15px;
+    display: block;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    background-position: top left;
+    background-repeat: no-repeat;
+    font-style: normal;
+    text-decoration: none;
+}
+
+html>body #main_nav_list a {
+    /*height: 38px;*/
+
+}
+
+a.main_nav_item {
+    line-height: 38px;
+    text-align: left;
+    width: 160px;
+    height: 38px;
+}
+
+a.main_nav_item:hover {
+    background: transparent;
+    line-height: 38px;
+    text-align: left;
+    width: 160px;
+    height: 38px;
+}
+
+a.main_nav_active_item {
+    line-height: 38px;
+    text-align: left;
+    width: 160px;
+    height: 38px;
+}
+
+/*--- container for the subnavigation --------------------------------------*/
+
+.sub_nav_container {
+    position: relative;
+    top: 0px;
+    line-height: 0;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 9px;
+    width: 197px;
+}
+
+/*--- subnavigation --------------------------------------------------------*/
+
+.sub_nav_list {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sub_nav_list li {
+    clear: both;
+    margin: 0px 0 0px 0;
+    padding: 0;
+    height: 25px;
+}
+
+/*--- subnavigation items --------------------------------------------------*/
+
+.sub_nav_list a {
+    overflow: hidden;
+    padding: 0 5px 0 27px;
+    display: block;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    background-position: top left;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+html>body .sub_nav_list a {
+    /*width: 165px;*/
+
+}
+
+a.sub_nav_item {
+    line-height: 25px;
+    height: 25px;
+    width: 165px;
+}
+
+a.sub_nav_item:hover {
+    line-height: 25px;
+    height: 25px;
+    width: 165px;
+}
+
+a.sub_nav_active_item {
+    line-height: 25px;
+    height: 25px;
+    width: 165px;
+}
+
+/*--- footer ---------------------------------------------------------------*/
+
+#footer {
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    width: 915px;
+    height: 21px;
+    clear: both;
+}
+
+#footer_text {
+    width: 900px;
+    padding: 0px 15px 0px 0px;
+    margin: 0 0px 0px 0px;
+    text-align: right;
+}
+
+/*----------------------------------------------------------------------------
+  default-styles for .content html-elements
+----------------------------------------------------------------------------*/
+
+/*--- paragraph ------------------------------------------------------------*/
+
+.content {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 5px 0 20px 0;
+    padding: 0;
+    line-height: 1.3;
+}
+.content2 {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 5px 0 20px 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+.content table {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0px 0px 15px 1px;
+    border-style: solid;
+    border-width: 1px;
+    border-spacing: 0;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-collapse: collapse;
+}
+
+.content2 table {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0px 0px 0px 1px;
+    border-width: 1px;
+    border-spacing: 1;
+    border-left: 0px solid;
+    border-top: 0px solid;
+    border-collapse: collapse;
+}
+
+.bottom_navigation table {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    border-style: hidden;
+    border-spacing: 0;
+ 
+}
+
+
+.content select {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.content input {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.content textarea {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.content p {
+    margin: 5px 0 20px 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+/*--- headings -------------------------------------------------------------*/
+
+/*--- links ----------------------------------------------------------------*/
+
+.content a {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+/*--- tables ---------------------------------------------------------------*/
+
+.content th {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    padding: 3px 5px 3px 5px;
+}
+
+.content td {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    padding: 3px 5px 3px 5px;
+}
+
+.content tr.odd {
+    padding: 3px 2px 3px 2px;
+}
+
+.content tr.even {
+    padding: 3px 2px 3px 2px;
+}
+
+/*--- forms ----------------------------------------------------------------*/
+
+.content fieldset {
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.subtitle_black {
+	font-size:14px;
+	font-weight:bold;
+}
+.subtitle_red {
+	font-size:14px;
+	font-weight:bold;
+	color:#C00;
+}
+.subtitle_orange {
+	font-size:14px;
+	font-weight:bold;
+	color:#FF6600;
+}
+#nav_text {
+  height:60px;
+  padding-top:10px;
+  padding-left:15px;
+  font-family: Arial, Verdana, sans-serif;
+  font-size:12px;
+}
+/*--- lists ----------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------*/
+
