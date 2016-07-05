@@ -3,7 +3,8 @@
 $page_title = "Members - Tucson Korean Tennis Association"; 
 $file_name = "members_active.php";
 
-mysql_select_db($database_connTennis, $connTennis);
+// mysql_select_db($database_connTennis, $connTennis);
+mysqli_select_db($connTennis, $database_connTennis);
 $query_rsNumberCounts = "SELECT (SELECT count(status_student) FROM members M INNER JOIN groups G ON M.Id = G.Id WHERE status_student = 1 AND active_member = 1 AND inactive = 0) AS Student_Num, ";
 $query_rsNumberCounts .= "(SELECT count(status_student) FROM members M INNER JOIN groups G ON M.Id = G.Id WHERE status_student = 0 AND active_member = 1 AND inactive = 0) AS Non_Student_Num, ";
 $query_rsNumberCounts .= "(SELECT count(gender) FROM members M INNER JOIN groups G ON M.Id = G.Id WHERE gender = 'M' AND active_member = 1 AND inactive = 0) AS Male_Num, ";
@@ -12,8 +13,9 @@ $query_rsNumberCounts .= "(SELECT count(ethnicity_korean) FROM members M INNER J
 $query_rsNumberCounts .= "(SELECT count(ethnicity_korean) FROM members M INNER JOIN groups G ON M.Id = G.Id WHERE ethnicity_korean = 0 AND active_member = 1 AND inactive = 0) AS Non_Korean_Num, ";
 $query_rsNumberCounts .= "(SELECT count(language_korean) FROM members M INNER JOIN groups G ON M.Id = G.Id WHERE language_korean = 1 AND active_member = 1 AND inactive = 0) AS KoreanSpeaker_Num, ";
 $query_rsNumberCounts .= "(SELECT count(language_korean) FROM members M INNER JOIN groups G ON M.Id = G.Id WHERE language_korean = 0 AND active_member = 1 AND inactive = 0) AS EnglishSpeaker_Num ";
-$rsNumberCounts = mysql_query($query_rsNumberCounts, $connTennis) or die(mysql_error());
-$row_rsNumberCounts = mysql_fetch_assoc($rsNumberCounts);
+// $rsNumberCounts = mysql_query($query_rsNumberCounts, $connTennis) or die(mysql_error());
+$rsNumberCounts = mysqli_query($connTennis, $query_rsNumberCounts) or die(mysqli_error());
+$row_rsNumberCounts = mysqli_fetch_assoc($rsNumberCounts);
 $total_number = $row_rsNumberCounts['Male_Num'] + $row_rsNumberCounts['Female_Num'];
 ?>
 <!DOCTYPE html
@@ -56,7 +58,7 @@ $total_number = $row_rsNumberCounts['Male_Num'] + $row_rsNumberCounts['Female_Nu
 		include('graphs.inc.php');
 		$student_num = $row_rsNumberCounts['Student_Num'];
 		$non_student_num = $row_rsNumberCounts['Non_Student_Num'];
-		$graph = new BAR_GRAPH("vBar");
+		$graph = new BAR_GRAPH2("vBar");
 		$graph->values = "$student_num, $non_student_num";
 		$graph->labels = "&nbsp;&nbsp;&nbsp;&nbsp;Students&nbsp;&nbsp;&nbsp;&nbsp;,NonStudents";
 		$graph->showValues = 0;
@@ -100,7 +102,7 @@ business owners, salarymen, housewives, visitors from Korea and people with vari
         <?php
 		$male_num = $row_rsNumberCounts['Male_Num'];
 		$female_num = $row_rsNumberCounts['Female_Num'];
-		$graph = new BAR_GRAPH("vBar");
+		$graph = new BAR_GRAPH2("vBar");
 		$graph->values = "$male_num ,$female_num";
 		$graph->labels = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		$graph->showValues = 0;
@@ -139,7 +141,7 @@ business owners, salarymen, housewives, visitors from Korea and people with vari
         <?php
 		$Korean_Num = $row_rsNumberCounts['Korean_Num'];
 		$Non_Korean_Num = $row_rsNumberCounts['Non_Korean_Num'];
-		$graph = new BAR_GRAPH("vBar");
+		$graph = new BAR_GRAPH2("vBar");
 		$graph->values = "$Korean_Num ,$Non_Korean_Num";
 		$graph->labels = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Korean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &nbsp;&nbsp;&nbsp;NonKorean&nbsp;";
 		$graph->showValues = 0;
@@ -179,7 +181,7 @@ business owners, salarymen, housewives, visitors from Korea and people with vari
         <?php
 		$KoreanSpeaker_Num = $row_rsNumberCounts['KoreanSpeaker_Num'];
 		$EnglishSpeaker_Num = $row_rsNumberCounts['EnglishSpeaker_Num'];
-		$graph = new BAR_GRAPH("vBar");
+		$graph = new BAR_GRAPH2("vBar");
 		$graph->values = "$KoreanSpeaker_Num ,$EnglishSpeaker_Num";
 		$graph->labels = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Korean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		$graph->showValues = 0;
