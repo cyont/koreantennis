@@ -29,11 +29,12 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-mysql_select_db($database_connTennis, $connTennis);
+// mysql_select_db($database_connTennis, $connTennis);
 $query_rsCourtRegions = "SELECT id, region FROM courts GROUP BY region ORDER BY region ASC";
-$rsCourtRegions = mysql_query($query_rsCourtRegions, $connTennis) or die(mysql_error());
-$row_rsCourtRegions = mysql_fetch_assoc($rsCourtRegions);
-$totalRows_rsCourtRegions = mysql_num_rows($rsCourtRegions);
+// $rsCourtRegions = mysqli_query($query_rsCourtRegions, $connTennis) or die(mysql_error());
+$rsCourtRegions = mysqli_query($connTennis, $query_rsCourtRegions) or die(mysqli_error());
+$row_rsCourtRegions = mysqli_fetch_assoc($rsCourtRegions);
+$totalRows_rsCourtRegions = mysqli_num_rows($rsCourtRegions);
  
 $page_title = "Tennis Courts in Tucson - Tucson Korean Tennis Association"; 
 $file_name = "courts.php";
@@ -72,10 +73,11 @@ $file_name = "courts.php";
 	     <p>
 	     <div class="contentsubtitle_orange"><?php echo $row_rsCourtRegions['region']; ?></div>	           
          <?php
-		mysql_select_db($database_connTennis, $connTennis);
+		// mysql_select_db($database_connTennis, $connTennis);
 		$query_rsCourt = "SELECT * FROM courts WHERE region = '" . $row_rsCourtRegions['region'] . "' ORDER BY name ASC";
-		$rsCourt = mysql_query($query_rsCourt, $connTennis) or die(mysql_error());
-		$row_rsCourt = mysql_fetch_assoc($rsCourt);
+		// $rsCourt = mysqli_query($query_rsCourt, $connTennis) or die(mysql_error());
+		$rsCourt = mysqli_query($connTennis, $query_rsCourt) or die(mysqli_error());
+		$row_rsCourt = mysqli_fetch_assoc($rsCourt);
 		?>
 		<?php 
 		do {
@@ -98,10 +100,10 @@ $file_name = "courts.php";
         </tr>
         </table>
         <?php
-		} while ($row_rsCourt = mysql_fetch_assoc($rsCourt));
+		} while ($row_rsCourt = mysqli_fetch_assoc($rsCourt));
 		?>
          </p>
-	     <?php } while ($row_rsCourtRegions = mysql_fetch_assoc($rsCourtRegions)); ?></div>
+	     <?php } while ($row_rsCourtRegions = mysqli_fetch_assoc($rsCourtRegions)); ?></div>
        </div>
        </td>
        </tr>
@@ -113,5 +115,5 @@ $file_name = "courts.php";
 </body>
 </html>
 <?php
-mysql_free_result($rsCourtRegions);
+mysqli_free_result($rsCourtRegions);
 ?>
